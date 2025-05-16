@@ -22,7 +22,11 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-const ContactForm = () => {
+interface ContactFormProps {
+  hideTitle?: boolean;
+}
+
+const ContactForm = ({ hideTitle = false }: ContactFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -53,10 +57,14 @@ const ContactForm = () => {
 
   return (
     <div className="bg-secondary/20 border border-white/5 rounded-lg p-6 card-hover">
-      <h2 className="text-xl font-bold mb-4 font-heading">Get in Touch</h2>
-      <p className="text-sm text-muted-foreground mb-6">
-        Have a question or want to work together? Drop me a message!
-      </p>
+      {!hideTitle && (
+        <>
+          <h2 className="text-xl font-bold mb-4 font-heading">Get in Touch</h2>
+          <p className="text-sm text-muted-foreground mb-6">
+            Have a question or want to work together? Drop me a message!
+          </p>
+        </>
+      )}
       
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
