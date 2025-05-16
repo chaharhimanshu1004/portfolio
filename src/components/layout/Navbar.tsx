@@ -23,9 +23,8 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/blog">Blog</NavLink>
-          <NavLink to="/snippets">Snippets</NavLink>
-          <NavLink to="/resources">Resources</NavLink>
           <NavLink to="/projects">Projects</NavLink>
+          <NavLink to="/about">About</NavLink>
         </div>
 
         {/* Mobile Menu Button */}
