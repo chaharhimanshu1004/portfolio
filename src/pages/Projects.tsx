@@ -2,33 +2,7 @@ import Layout from '../components/layout/Layout';
 import { Card, CardContent, CardHeader, CardFooter } from '@/components/ui/card';
 import { Github, ExternalLink, Code } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-
-const projects = [
-	{
-		id: 1,
-		title: 'Portfolio Website',
-		description: 'Personal portfolio website built with React and TailwindCSS',
-		tags: ['React', 'TailwindCSS'],
-		githubUrl: 'https://github.com/username/portfolio',
-		liveUrl: 'https://portfolio.example.com',
-	},
-	{
-		id: 2,
-		title: 'Task Manager',
-		description: 'A minimalist task management application',
-		tags: ['TypeScript', 'React', 'Firebase'],
-		githubUrl: 'https://github.com/username/task-manager',
-		liveUrl: 'https://task-manager.example.com',
-	},
-	{
-		id: 3,
-		title: 'Weather App',
-		description: 'Real-time weather application with location detection',
-		tags: ['JavaScript', 'API', 'React'],
-		githubUrl: 'https://github.com/username/weather-app',
-		liveUrl: 'https://weather-app.example.com',
-	},
-];
+import { projects } from '@/data/projects';
 
 const Projects = () => {
 	return (
